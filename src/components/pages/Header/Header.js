@@ -54,6 +54,11 @@ const Header = () => {
                 to="/contact">
                 <Button color="inherit">Contact</Button>
               </NavLink>
+              <NavLink
+                style={{ textDecoration: "none", color: "white" }}
+                to="/login">
+                <Button color="inherit">Login</Button>
+              </NavLink>
 
               {/* {user?.email ? (
                 <Navbar className="another-menu">
