@@ -1,0 +1,21 @@
+.sp-img {
+  margin-top: -100px;
+  background: url("../../../../img/duncan-adler-TVsVauS4QKo-unsplash.jpg")
+    no-repeat center / cover;
+  height: 500px;
+  width: auto;
+}
+.sp-img h1 {
+  background-color: rgba(136, 207, 255, 0.514);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.sp-img .overlay {
+  display: flex;
+  align-items: center;
+  height: 400px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}

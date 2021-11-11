@@ -1,0 +1,30 @@
+.bg-img {
+  /* margin-top: -100px; */
+  background: url("../../../../img/fabio-spinelli-cPpmFa1OiGU-unsplash.jpg")
+    no-repeat center / cover;
+  height: 600px;
+  width: auto;
+}
+.bg-img h2 {
+  background-color: rgba(196, 136, 8, 0.349);
+  padding: 15px;
+  border-radius: 15px;
+}
+.bg-img h5 {
+  background-color: rgba(196, 8, 86, 0.349);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.bg-img .overlay {
+  display: flex;
+  align-items: center;
+  height: 600px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bg-dark:hover {
+  background-color: rgb(11, 150, 155);
+}

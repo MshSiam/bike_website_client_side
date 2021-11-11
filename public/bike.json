@@ -1,0 +1,98 @@
+[
+  {
+    "name": "BENELLI TNT135",
+    "description": "Benelli’s more-recent entry to the market with the TNT135 is more than worth considering if shopping in this space, putting a sleek, aggressive, and unmistakably Italian twist on the standard minibike formula. The smallest member of the Chinese-made Italian firm’s hyper-naked lineup, the TNT135 features an exotic dual-pipe exhaust setup, a streetfighter-style headlight, and body-integrated tail-lighting, but one aspect that really makes this model stand out is its sub-$2,800 MSRP.",
+    "img": "http://benelli.ssrmotorsports.com/pic/model/135np.jpg",
+    "price": 2749,
+    "Engine": " Air and oil-cooled 134.7cc SOHC single-cylinder",
+    "Origin": "China"
+  },
+  {
+    "name": "CLEVELAND CYCLEWERKS HOOLIGUN",
+    "description": "Cleveland Cycle Werks’ Hooligun is an incredibly capable yet affordable thrill machine with an accessible MSRP made possible through the use of the American-assembled machine’s Chinese-Sourced powertrain. Despite its budget-friendly price-tag, the Hooligun is equipped with a surprisingly premium array of componentry, with an inverted front-end, a six-speed transmission, and a fuel-injected engine that’s good for more than 80 miles per gallon and speeds exceeding 70mph.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2020-Cleveland-Cyclewerks-Hooligun.jpg",
+    "price": 3700,
+    "Engine": " Liquid-cooled 450cc SOHC single-cylinder",
+    "Origin": "America"
+  },
+  {
+    "name": "HONDA MONKEY",
+    "description": "Monkey is another modern interpretation of a beloved motorcycle icon, this time evoking the spirit of the little Z series of the 1960s and ‘70s. Though the modern version boasts a visual design that’s tightly inline with that of the original, the new Monkey packs far more oomph, doubling the power output of their predecessors and making for a machine that’s conducive to short-distance rides around town rather than just fields and off-road trails.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2021-Honda-Monkey.jpg",
+    "price": 3999,
+    "Engine": "  Air-cooled 124.9cc SOHC single-cylinde",
+    "Origin": "Japan"
+  },
+  {
+    "name": "HONDA TRAIL 125 ABS",
+    "description": "Honda’s legendary Cub range which dates back to 1958 and stands as the all-time best-selling model range in history with well over a million units sold. After debuting as a concept vehicle at the 2019 Tokyo Motor Show, this scrambler version of the eighth-liter runner now boasts a selection of dirt-oriented parts such as a high-mount exhaust, spoked wheels, a rear luggage rack, increased suspension travel and fuel capacity, crash bars, and a small skid plate, among several other touches.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2021-Honda-Trail-125-ABS.jpg",
+    "price": 3899,
+    "Engine": " Air-cooled 124.9cc SOHC single-cylinder",
+    "Origin": "Japan"
+  },
+  {
+    "name": "KTM DUKE 200",
+    "description": "KTM first released its 390 Duke in 2013 and quickly went on to corner the market on the premium small-displacement naked class, though now, after the better part of a decade of success—and a number of noteworthy mechanical and component upgrades—the Ready To Race brand is offering the same fan-favorite Duke in a smaller, even-more manageable and new-rider-friendly 200cc version. Even with the reduced displacement and cheaper price, the fifth-liter variant retains its big brother’s sharp Kioka-Designed aesthetics and menacing appearance, plus its litany of top-shelf running gear such as its inverted WP forks and mono-shock, and ABS-enabled Brembo-made brakes.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2021-KTM-Duke-200.jpg",
+    "price": 3999,
+    "Engine": " Liquid-cooled 200cc DOHC single-cylinder",
+    "Origin": "Austria"
+  },
+  {
+    "name": "YAMAHA V-STAR 250",
+    "description": "Yamaha’s V Star 250 is a shockingly competent touring bike offered at an almost suspiciously accessible price. Not only does the pint-sized cruiser model pack a genuine V-Twin powertrain, but the chain-driven sled is also more than capable of touring duties with fuel-consumption rated at 78mpg and a top speed of over 85mph. On the flip side of the coin, the quarter-liter V Star’s 27” seat height and 324lb curb weight also make it a great candidate for urban riding and commuting duties. And while it admittedly might lack the character or prestige of a Harley or Indian model, you’d still be hard-pressed to find a better entry-level cruiser.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2021-Yamaha-V-Star-250.jpg",
+    "price": 4499,
+    "Engine": " Air-cooled 249cc SOHC 60° V-twin",
+    "Origin": "Japan"
+  },
+  {
+    "name": "FB MONDIAL HPS 125",
+    "description": " FB Mondial was a legendary Italian motorcycle manufacturer with an incredibly successful race history spanning approximately almost a decade in the 1940s and 1950s. And though the original Milan-based outfit closed its doors at the end of the ‘70s, FB Mondial has since been revived (again) by descendants of the original owners and operators, and now trades in stunning neb-retro-designed, Chinese-manufactured, small-displacement motorcycles like the HPS (or “Hipster”) 125. Kicked along by a liquid-cooled, fuel-injected DOHC single, the HPS 125 features one of the most modern and unique designs across the entire entry-level market.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2021-FB-Monidal-HPS-125.jpg",
+    "price": 4512,
+    "Engine": "Liquid-cooled 124cc DOHC single-cylinder",
+    "Origin": "Italy (Chinese-made)"
+  },
+  {
+    "name": "YAMAHA MT-03",
+    "description": "The naked counterpart to the Japanese brand’s YZF-R3 supersport bike, the MT-03 is a popular and highly-versatile urban commuter bike, good for everything from touring to canyon riding and track days. Powered by a parallel-twin engine, the little MT wears aggressive-looking headlights bookended by a sharp set of air scoops, and an angular belly-pan and pair of radiator covers that help to fill out the negative space surrounding the 321cc two-banger, giving the small displacement bike an appearance similar to its 689cc, 890cc, and 998cc siblings.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2021-Yamaha-MT-03.jpg",
+    "price": 4599,
+    "Engine": " Liquid-cooled 321cc DOHC parallel-twin",
+    "Origin": "Japan"
+  },
+  {
+    "name": "SUZUKI TU250X",
+    "description": "If you’re interested in a classically-styled, no-grills standard bike, then look no further than Suzuki’s TU250X. With its chrome accents, a pronounced headlight bucket, large fenders, spoked wheels, a peanut tank, and a swept-back muffler all make for a bike that could easily pass for a 1960s model. That said, the Hamamatsu marque’s 250cc classic also benefits from several decades of technological improvements, giving it old-school style and modern-day reliability, emissions, and fuel economy.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2021-Suzuki-TU250X.jpg",
+    "price": 4649,
+    "Engine": " Air-cooled 249cc SOHC single-cylinder",
+    "Origin": "Japan"
+  },
+  {
+    "name": "BMW G310R",
+    "description": "BMW Motorrad bike that offers staggering performance capabilities relative to its price. Visually-inspired by its liter-sized roadster big brother, the S1000R, the G310R boasts upside-down gold-anodized forks, a multifunction digital display with fuel-level and gear-position indicators, cast-aluminum wheels, and a manageable 30.9″ seat height. Sold in one of three paint options—including a traditional M Racing livery—its 313cc single enables it to achieve freeway-capable speeds of around 90mph.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2021-BMW-G310R.jpg",
+    "price": 4945,
+    "Engine": " Liquid-cooled 313cc DOHC single-cylinder",
+    "Origin": "Germany"
+  },
+  {
+    "name": "HONDA CB300R",
+    "description": "Honda’s Neo Sports Cafe (or NSC) range—the Big Red’s take on modern-day cafe racers—the CB300R offers a lot of performance and technology in a fairly-priced package. A 41mm inverted fork, track-derived steel chassis, LED lighting and blacked-out hardware throughout, and ABS-linked Nissan calipers biting down on petal rotors are all standard fare. The CB300R’s liquid-cooled 30hp single not only makes it good for speeds of approximately 90mph but also earns it touring capabilities with a counterbalance shaft that hugely mitigates vibration and increases long-distance riding comfort.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2021-Honda-CB300R.jpg",
+    "price": 4949,
+    "Engine": " Liquid-cooled 286cc DOHC single-cylinder",
+    "Origin": "Japan"
+  },
+  {
+    "name": "SYM WOLF CR300I",
+    "description": "When talking neo-retro models, you’ll often hear the phrase “the best of both worlds,” with these vintage-inspired contemporary platforms offering modern-day technology, performance, safety, and reliability, while being dressed up as production and race models of yesteryear. And that’s exactly what we’ve got with the SYM Wolf CR300i, a new retro-style cafe racer backed by all the modern amenities one could ask for. Built around a high-tensile steel double-cradle frame and good for speeds of over 85mph, the Cafe Racer 300 Injection also gets a headlight cowl and tail cowl, cast aluminum wheels, a bevy of aluminum details, a classic dual clock cafe instrumentation setup, and a contemporary take on a cafe-meets-superbike muffler.",
+    "img": "https://cdn.hiconsumption.com/wp-content/uploads/2021/01/2020-SYM-Wolf-CR300i.jpg",
+    "price": 4999,
+    "Engine": " Liquid-cooled 278cc DOHC single-cylinder",
+    "Origin": "China"
+  }
+]
