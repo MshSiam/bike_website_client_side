@@ -37,6 +37,11 @@ const Header = () => {
                 to="/bikes">
                 <Button color="inherit">Bikes</Button>
               </NavLink>
+              <NavLink
+                style={{ textDecoration: "none", color: "white" }}
+                to="/dashboard">
+                <Button color="inherit">Dashboard</Button>
+              </NavLink>
 
               <NavLink
                 style={{ textDecoration: "none", color: "white" }}
@@ -48,12 +53,6 @@ const Header = () => {
                 style={{ textDecoration: "none", color: "white" }}
                 to="/contact">
                 <Button color="inherit">Contact</Button>
-              </NavLink>
-
-              <NavLink
-                style={{ textDecoration: "none", color: "white" }}
-                to="/dashboard">
-                <Button color="inherit">Dashboard</Button>
               </NavLink>
 
               {/* {user?.email ? (

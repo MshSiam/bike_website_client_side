@@ -27,15 +27,15 @@ function App() {
           <Route path="/bikes">
             <BikePage></BikePage>
           </Route>
+          <Route path="/dashboard">
+            <DashBoard></DashBoard>
+          </Route>
 
           <Route path="/about">
             <AboutUs></AboutUs>
           </Route>
           <Route path="/contact">
             <ContactUs></ContactUs>
-          </Route>
-          <Route path="/dashboard">
-            <DashBoard></DashBoard>
           </Route>
 
           {/* <MyOrders path="/user/:userId">

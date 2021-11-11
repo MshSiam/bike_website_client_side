@@ -6,9 +6,9 @@
   transition: 0.4s;
 }
 
-.service {
+/* .service {
   height: 800px;
-}
+} */
 
 .service-img:hover {
   transform: scale(1.1);
