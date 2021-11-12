@@ -19,7 +19,7 @@ const Bike = (props) => {
         </h4>
         <NavLink to={`/booking/${_id}`}>
           <Button className="bike-btn" variant="contained">
-            Book Now
+            Purchase ${price}
           </Button>
         </NavLink>
       </div>

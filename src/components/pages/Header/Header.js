@@ -2,8 +2,10 @@ import { Container, Nav, Navbar } from "react-bootstrap"
 import Button from "@mui/material/Button"
 import React from "react"
 import { Link, NavLink } from "react-router-dom"
+import useAuth from "../../../hooks/useAuth"
 
 const Header = () => {
+  const { user, logOut } = useAuth()
   return (
     <div>
       <Navbar
@@ -54,57 +56,20 @@ const Header = () => {
                 to="/contact">
                 <Button color="inherit">Contact</Button>
               </NavLink>
-              <NavLink
-                style={{ textDecoration: "none", color: "white" }}
-                to="/login">
-                <Button color="inherit">Login</Button>
-              </NavLink>
-
-              {/* {user?.email ? (
-                <Navbar className="another-menu">
-                  <Nav.Link>
-                    <NavLink to="/addspot" className="nav-link">
-                      <button className="menuBtn">Add Spot</button>
-                    </NavLink>
-                  </Nav.Link>
-                  <NavLink to="/manageBookings" className="nav-link">
-                    <button className="menuBtn">Manage Orders</button>
-                  </NavLink>
-                  <NavLink to="/myBookings" className="nav-link">
-                    <button className="menuBtn">My Bookings</button>
-                  </NavLink>
-                  <NavLink to="/">
-                    <button onClick={logOut} className="btn-danger rounded-3">
-                      {sigOut}
-                    </button>
-                  </NavLink>
-                  <Navbar.Text className="text-dark">
-                    Sign in as :{" "}
-                    <small className="text-dark ml-2">
-                      {user?.displayName}
-                    </small>
-                  </Navbar.Text>
-                </Navbar>
+              {user?.email ? (
+                <Button
+                  style={{ textDecoration: "none", color: "white" }}
+                  onClick={logOut}
+                  color="inherit">
+                  Log Out
+                </Button>
               ) : (
-                <Navbar className="loginSingup">
-                  <Nav.Link>
-                    <NavLink to="/login" className="nav-link">
-                      <button className="btn-danger2 loginbtn rounded-3">
-                        {" "}
-                        {signIn} Login
-                      </button>
-                    </NavLink>
-                  </Nav.Link>
-                  <Nav.Link>
-                    <NavLink to="/signup" className="nav-link">
-                      <button className="btn-danger rounded-3 signupbtn">
-                        {" "}
-                        Signup
-                      </button>
-                    </NavLink>
-                  </Nav.Link>
-                </Navbar>
-              )} */}
+                <NavLink
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/login">
+                  <Button color="inherit">Login</Button>
+                </NavLink>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

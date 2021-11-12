@@ -1,14 +1,24 @@
-import { Typography, TextField, Button } from "@mui/material"
+import {
+  Typography,
+  TextField,
+  Button,
+  Alert,
+  CircularProgress
+} from "@mui/material"
 import React, { useState } from "react"
 import { Grid } from "@mui/material"
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation, useHistory } from "react-router-dom"
 import { Box } from "@mui/system"
+import useAuth from "../../../hooks/useAuth"
 
 const Login = () => {
   const [loginData, setLoginData] = useState({})
+  const { user, loginUser, signInWithGoogle, isLoading, authError } = useAuth()
 
-  // handle blur
-  const handleOnBlur = (e) => {
+  const location = useLocation()
+  const history = useHistory()
+  // handle blur //
+  const handleOnChange = (e) => {
     const field = e.target.name
     const value = e.target.value
     const newLoginData = { ...loginData }
@@ -18,8 +28,15 @@ const Login = () => {
 
   // button handler
   const handleLoginSubmit = (e) => {
+    loginUser(loginData.email, loginData.password, location, history)
     e.preventDefault()
   }
+
+  // google sign in
+  const handleGoogleSignIn = () => {
+    signInWithGoogle(location, history)
+  }
+
   return (
     <Box>
       <Grid className="my-4" container>
@@ -29,25 +46,25 @@ const Login = () => {
           </Typography>
           <form onSubmit={handleLoginSubmit}>
             <TextField
-              sx={{ width: "75%", m: 1 }}
+              sx={{ width: "65%", m: 1 }}
               id="standard-basic"
               label="Your Email"
               name="email"
-              onBlur={handleOnBlur}
+              onBlur={handleOnChange}
               variant="standard"
             />
             <TextField
-              sx={{ width: "75%", m: 1 }}
+              sx={{ width: "65%", m: 1 }}
               id="standard-basic"
               label="Your Password"
               type="password"
               name="password"
-              onBlur={handleOnBlur}
+              onBlur={handleOnChange}
               variant="standard"
             />
 
             <Button
-              sx={{ width: "75%", m: 1 }}
+              sx={{ width: "65%", m: 1 }}
               type="submit"
               variant="contained">
               Login
@@ -58,21 +75,23 @@ const Login = () => {
               {" "}
               New User ? Please
               <NavLink style={{ textDecoration: "none" }} to="/signup">
-                <Button variant="text"> Signup</Button>
+                <Button type="submit" variant="text">
+                  {" "}
+                  Signup
+                </Button>
               </NavLink>
             </Typography>
 
-            {/* {isLoading && <CircularProgress />}
+            {isLoading && <CircularProgress />}
             {user?.email && (
-              <Alert severity="success">Login successfully!</Alert>
+              <Alert severity="success">Loged in successfully!</Alert>
             )}
-            {authError && <Alert severity="error">{authError}</Alert>} */}
+            {authError && <Alert severity="error">{authError}</Alert>}
           </form>
 
-          <Button variant="contained">Google Sign In</Button>
-          {/* <Button onClick={handleGoogleSignIn} variant="contained">
+          <Button onClick={handleGoogleSignIn} variant="contained">
             Google Sign In
-          </Button> */}
+          </Button>
         </Grid>
       </Grid>
       <br />
