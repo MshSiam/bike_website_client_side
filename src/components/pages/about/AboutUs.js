@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className="container my-5">
         <div className="row ">
           <div className="col-lg-6 col-md-12">
-            <img src={aboutImg} alt="" />
+            <img className="img-fluid" src={aboutImg} alt="" />
           </div>
           <div className="col-lg-6 col-md-12">
             <h1 className="about_heading mt-5">A B O U T</h1>

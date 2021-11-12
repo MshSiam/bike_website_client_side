@@ -12,6 +12,7 @@ import DashBoard from "./components/pages/dashboard/DashBoard"
 import BikePage from "./components/pages/bikes/BikePage"
 import AuthProvider from "./components/Context/AuthProvider"
 import PrivateRoute from "./private route/PrivateRouete"
+import Purchase from "./components/pages/purchase/Purchase"
 
 function App() {
   return (
@@ -32,9 +33,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <DashBoard></DashBoard>
             </PrivateRoute>
-            {/* <PrivateRoute path="/buying/:buyingId">
-              <Booking></Booking>
-            </PrivateRoute> */}
+            <PrivateRoute path="/purchasing/:purchasingId">
+              <Purchase></Purchase>
+            </PrivateRoute>
 
             <Route path="/about">
               <AboutUs></AboutUs>

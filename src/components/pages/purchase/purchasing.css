@@ -1,0 +1,25 @@
+.booking-form {
+  margin: 0 auto;
+}
+.booking-form input,
+textarea {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.error-div {
+  text-align: left;
+}
+.error {
+  color: red;
+  text-align: left;
+}
+.c-heading {
+  text-align: left;
+  color: rgb(102, 66, 19);
+}

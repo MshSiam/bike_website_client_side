@@ -54,7 +54,7 @@ const ContactUs = () => {
               aria-label="minimum height"
               minRows={3}
               placeholder="Your Message"
-              style={{ width: "65%" }}
+              style={{ width: "65%", margin: "10px auto" }}
             />
             <Button variant="contained" type="submit" style={{ width: "65%" }}>
               Submit

@@ -15,7 +15,7 @@ const Footer = () => {
       </div> */}
       <Box>
         <Grid container style={{ color: "white" }}>
-          <Grid style={{ textAlign: "left" }} xs={4} item>
+          <Grid style={{ textAlign: "left" }} xs={6} md={6} item>
             <Typography variant="h5">HICONSUMPTION</Typography>
             <br />
             <Typography style={{ marginTop: 4 }} variant="h6">
@@ -27,10 +27,8 @@ const Footer = () => {
             <br />
             <Typography variant="p">N3H 2G8</Typography>
           </Grid>
-          <Grid style={{ textAlign: "center" }} xs={4} item>
-            <Typography variant="h5">Social Links</Typography>
-          </Grid>
-          <Grid xs={4} item>
+
+          <Grid xs={6} md={6} item>
             <Typography style={{ marginTop: 4 }} variant="h6">
               Contact Information
             </Typography>
