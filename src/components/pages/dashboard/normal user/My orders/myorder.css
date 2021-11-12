@@ -1,0 +1,13 @@
+.myorder {
+}
+
+@media only screen and (max-width: 600px) {
+  .myorder {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .myorder {
+    width: 100%;
+  }
+}

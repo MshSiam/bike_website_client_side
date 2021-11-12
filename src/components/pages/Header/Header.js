@@ -3,6 +3,7 @@ import Button from "@mui/material/Button"
 import React from "react"
 import { Link, NavLink } from "react-router-dom"
 import useAuth from "../../../hooks/useAuth"
+import { Box } from "@mui/system"
 
 const Header = () => {
   const { user, logOut } = useAuth()
@@ -39,11 +40,6 @@ const Header = () => {
                 to="/bikes">
                 <Button color="inherit">Bikes</Button>
               </NavLink>
-              <NavLink
-                style={{ textDecoration: "none", color: "white" }}
-                to="/dashboard">
-                <Button color="inherit">Dashboard</Button>
-              </NavLink>
 
               <NavLink
                 style={{ textDecoration: "none", color: "white" }}
@@ -57,12 +53,20 @@ const Header = () => {
                 <Button color="inherit">Contact</Button>
               </NavLink>
               {user?.email ? (
-                <Button
-                  style={{ textDecoration: "none", color: "white" }}
-                  onClick={logOut}
-                  color="inherit">
-                  Log Out
-                </Button>
+                <Box>
+                  <NavLink
+                    style={{ textDecoration: "none", color: "white" }}
+                    to="/dashboard">
+                    <Button color="inherit">Dashboard</Button>
+                  </NavLink>
+
+                  <Button
+                    style={{ textDecoration: "none", color: "white" }}
+                    onClick={logOut}
+                    color="inherit">
+                    Log Out
+                  </Button>
+                </Box>
               ) : (
                 <NavLink
                   style={{ textDecoration: "none", color: "white" }}
