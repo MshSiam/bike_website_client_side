@@ -17,6 +17,8 @@ const useFirebase = () => {
   const [user, setUser] = useState({})
   const [isLoading, setIsLoading] = useState(true)
   const [authError, setAuthError] = useState("")
+  const [admin, setAdmin] = useState(false)
+
   const auth = getAuth()
   const googleProvider = new GoogleAuthProvider()
 
@@ -28,8 +30,8 @@ const useFirebase = () => {
         setAuthError("")
         const newUser = { email, displayName: name }
         setUser(newUser)
-        // save user to database
-        // saveUser(email, name, "POST")
+        // save user to the database
+        saveUser(email, name, "POST")
         // send name to firebase after creation
         updateProfile(auth.currentUser, {
           displayName: name
@@ -91,7 +93,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user
         setAuthError("")
-        // saveUser(user.email, user.displayName, "PUT")
+        saveUser(user.email, user.displayName, "PUT")
       })
       .catch((error) => {
         setAuthError(error.message)
@@ -99,8 +101,28 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false))
   }
 
+  // save user to dab
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName }
+    fetch(`http://localhost:5000/users`, {
+      method: method,
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(user)
+    })
+  }
+
+  // admin matching
+  useEffect(() => {
+    fetch(`http://localhost:5000/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin))
+  }, [user?.email])
+
   return {
     user,
+    admin,
     registerUser,
     loginUser,
     logOut,

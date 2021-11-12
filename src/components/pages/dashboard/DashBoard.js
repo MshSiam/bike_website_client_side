@@ -6,40 +6,122 @@ import CssBaseline from "@mui/material/CssBaseline"
 import Divider from "@mui/material/Divider"
 import Drawer from "@mui/material/Drawer"
 import IconButton from "@mui/material/IconButton"
-import InboxIcon from "@mui/icons-material/MoveToInbox"
-import List from "@mui/material/List"
-import ListItem from "@mui/material/ListItem"
-import ListItemIcon from "@mui/material/ListItemIcon"
-import ListItemText from "@mui/material/ListItemText"
-import MailIcon from "@mui/icons-material/Mail"
+
 import MenuIcon from "@mui/icons-material/Menu"
 import Toolbar from "@mui/material/Toolbar"
-import Typography from "@mui/material/Typography"
-import { Grid } from "@mui/material"
+import { Typography, Button } from "@mui/material"
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom"
+import Dashbordhome from "./dashbord home/Dashbordhome"
+import MakeAdmin from "./Admin/Make Admin/MakeAdmin"
 import MyOrders from "./normal user/My orders/MyOrders"
+import AddProduct from "./Admin/Add A bike/AddProduct"
+import Payment from "./normal user/payment/Payment"
+import Review from "./normal user/Review/Review"
+import ManageProducts from "./Admin/Manage Products/ManageProducts"
+import ManageOrders from "./Admin/ManageAllOrders/ManageOrders"
+import useAuth from "../../../hooks/useAuth"
 
 const DashBoard = (props) => {
   const { window } = props
   const [mobileOpen, setMobileOpen] = React.useState(false)
-
+  let { path, url } = useRouteMatch()
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
   }
+  const { admin, logOut } = useAuth()
 
   const drawer = (
     <div>
       <Toolbar />
       <Divider />
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      {admin ? (
+        <Box>
+          <Link style={{ textDecoration: "none" }} to={`${url}/makeAdmin`}>
+            <Button
+              style={{ marginBottom: "10px" }}
+              variant="contained"
+              color="warning">
+              Make Admin
+            </Button>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to={`${url}/addProduct`}>
+            <Button
+              style={{ marginBottom: "10px" }}
+              variant="contained"
+              color="warning">
+              Add Product
+            </Button>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to={`${url}/manageProducts`}>
+            <Button
+              style={{ marginBottom: "10px" }}
+              variant="contained"
+              color="warning">
+              Manage Products
+            </Button>
+          </Link>
+          <Link
+            style={{ textDecoration: "none" }}
+            to={`${url}/manageAllOrders`}>
+            <Button
+              style={{ marginBottom: "10px" }}
+              variant="contained"
+              color="warning">
+              Manage Orders
+            </Button>
+          </Link>
+        </Box>
+      ) : (
+        <Box>
+          <Link style={{ textDecoration: "none" }} to={`${url}/dashboard`}>
+            <Button
+              style={{ marginBottom: "10px" }}
+              variant="contained"
+              color="warning">
+              Dashboard
+            </Button>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/bikes">
+            <Button
+              style={{ marginBottom: "10px" }}
+              variant="contained"
+              color="warning">
+              Bikes
+            </Button>
+          </Link>
+          <br />
+
+          <Link style={{ textDecoration: "none" }} to={`${url}/myOrder`}>
+            <Button
+              style={{ marginBottom: "10px" }}
+              variant="contained"
+              color="warning">
+              My Orders
+            </Button>
+          </Link>
+
+          <Link style={{ textDecoration: "none" }} to={`${url}/payment`}>
+            <Button
+              style={{ marginBottom: "10px" }}
+              variant="contained"
+              color="warning">
+              Payment
+            </Button>
+          </Link>
+          <br />
+          <Link style={{ textDecoration: "none" }} to={`${url}/review`}>
+            <Button
+              style={{ marginBottom: "10px" }}
+              variant="contained"
+              color="warning">
+              Review
+            </Button>
+          </Link>
+        </Box>
+      )}
+      <Button onClick={logOut} color="error" variant="contained">
+        Log Out
+      </Button>
     </div>
   )
 
@@ -109,11 +191,32 @@ const DashBoard = (props) => {
           width: { sm: `calc(100% - 200px)` }
         }}>
         <Toolbar />
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
+        <Switch>
+          <Route path={`${path}/dashboard`}>
+            <Dashbordhome></Dashbordhome>
+          </Route>
+          <Route path={`${path}/makeAdmin`}>
+            <MakeAdmin></MakeAdmin>
+          </Route>
+          <Route path={`${path}/myOrder`}>
             <MyOrders></MyOrders>
-          </Grid>
-        </Grid>
+          </Route>
+          <Route path={`${path}/addProduct`}>
+            <AddProduct></AddProduct>
+          </Route>
+          <Route path={`${path}/manageAllOrders`}>
+            <ManageOrders></ManageOrders>
+          </Route>
+          <Route path={`${path}/manageProducts`}>
+            <ManageProducts></ManageProducts>
+          </Route>
+          <Route path={`${path}/payment`}>
+            <Payment></Payment>
+          </Route>
+          <Route path={`${path}/review`}>
+            <Review></Review>
+          </Route>
+        </Switch>
       </Box>
     </Box>
   )
