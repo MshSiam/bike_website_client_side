@@ -5,7 +5,7 @@ import ReviewSingle from "./ReviewSingle"
 const ReviewSection = () => {
   const [products, setProducts] = useState([])
   useEffect(() => {
-    fetch("http://localhost:5000/review")
+    fetch("https://fast-brushlands-19287.herokuapp.com/review")
       .then((res) => res.json())
       .then((data) => setProducts(data))
   }, [])

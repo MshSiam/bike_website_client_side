@@ -13,13 +13,15 @@ const Review = () => {
   const onSubmit = (data) => {
     data.email = user?.email
     console.log(data.email)
-    axios.post("http://localhost:5000/review", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Review Added Succefully")
-        history.push("/home")
-        reset()
-      }
-    })
+    axios
+      .post("https://fast-brushlands-19287.herokuapp.com/review", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Review Added Succefully")
+          history.push("/home")
+          reset()
+        }
+      })
   }
   return (
     <div>
