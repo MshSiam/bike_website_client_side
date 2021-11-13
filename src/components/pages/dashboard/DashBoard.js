@@ -20,6 +20,7 @@ import Review from "./normal user/Review/Review"
 import ManageProducts from "./Admin/Manage Products/ManageProducts"
 import ManageOrders from "./Admin/ManageAllOrders/ManageOrders"
 import useAuth from "../../../hooks/useAuth"
+import AdminRoute from "../Login/AdminRoute/AdminRoute"
 
 const DashBoard = (props) => {
   const { window } = props
@@ -195,21 +196,21 @@ const DashBoard = (props) => {
           <Route path={`${path}/dashboard`}>
             <Dashbordhome></Dashbordhome>
           </Route>
-          <Route path={`${path}/makeAdmin`}>
+          <AdminRoute path={`${path}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
-          </Route>
+          </AdminRoute>
           <Route path={`${path}/myOrder`}>
             <MyOrders></MyOrders>
           </Route>
-          <Route path={`${path}/addProduct`}>
+          <AdminRoute path={`${path}/addProduct`}>
             <AddProduct></AddProduct>
-          </Route>
-          <Route path={`${path}/manageAllOrders`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/manageAllOrders`}>
             <ManageOrders></ManageOrders>
-          </Route>
-          <Route path={`${path}/manageProducts`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/manageProducts`}>
             <ManageProducts></ManageProducts>
-          </Route>
+          </AdminRoute>
           <Route path={`${path}/payment`}>
             <Payment></Payment>
           </Route>

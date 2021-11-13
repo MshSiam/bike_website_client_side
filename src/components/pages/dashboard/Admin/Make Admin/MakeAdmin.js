@@ -1,15 +1,18 @@
 import { TextField, Button, Alert } from "@mui/material"
 import React, { useState } from "react"
+import useAuth from "../../../../../hooks/useAuth"
 
 const MakeAdmin = () => {
   const [email, setEmail] = useState("")
   const [success, setSuccess] = useState(false)
+  const { token } = useAuth()
 
   const handleSubmit = (e) => {
     const user = { email }
     fetch("http://localhost:5000/users/admin", {
       method: "PUT",
       headers: {
+        authorization: `Bearer ${token}`,
         "content-type": "application/json"
       },
       body: JSON.stringify(user)
@@ -18,7 +21,7 @@ const MakeAdmin = () => {
       .then((data) => {
         if (data.modifiedCount) {
           console.log(data)
-          setSuccess(true)
+          setSuccess()
         }
       })
 
@@ -43,11 +46,7 @@ const MakeAdmin = () => {
           onBlur={handleBlur}
           variant="standard"></TextField>
         <br />
-        {success && (
-          <Alert style={{ width: "65%", margin: "0 auto" }} severity="success">
-            Made Admin Successfully
-          </Alert>
-        )}
+        {success && <Alert severity="success">Made Admin Successfully</Alert>}
 
         <Button
           style={{ marginBottom: "20px", marginTop: "20px", width: "65%" }}
