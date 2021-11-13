@@ -59,12 +59,13 @@ const ManageOrders = () => {
       })
   }
   //   load data
+  //
   useEffect(() => {
     const url = `https://fast-brushlands-19287.herokuapp.com/purchasing`
     fetch(url)
       .then((res) => res.json())
       .then((data) => setOrder(data))
-  }, [user.email])
+  }, [])
 
   return (
     <div className="myorder">

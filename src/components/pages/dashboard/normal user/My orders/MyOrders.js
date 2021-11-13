@@ -15,8 +15,9 @@ const MyOrders = () => {
   const [orders, setOrder] = useState([])
 
   //   load data
+  //
   useEffect(() => {
-    const url = `https://fast-brushlands-19287.herokuapp.com/purchasing?email=${user?.email}`
+    const url = `https://fast-brushlands-19287.herokuapp.com/purchasing/email/?email=${user?.email}`
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
