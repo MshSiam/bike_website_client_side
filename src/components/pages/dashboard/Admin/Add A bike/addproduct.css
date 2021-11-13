@@ -1,0 +1,11 @@
+.spot-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spot-container input {
+  margin-top: 15px;
+  width: 65%;
+}

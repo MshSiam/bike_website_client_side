@@ -14,13 +14,30 @@ const ManageOrders = () => {
   const { user } = useAuth()
   const [orders, setOrder] = useState([])
 
-  //   load data
-  useEffect(() => {
-    const url = `http://localhost:5000/purchasing`
-    fetch(url)
+  const handleUpdate = (id) => {
+    const updateStatus = { status: "Shipping>>" }
+    const url = `http://localhost:5000/purchasing/${id}`
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(updateStatus)
+    })
       .then((res) => res.json())
-      .then((data) => setOrder(data))
-  }, [user.email])
+      .then((data) => {
+        console.log(data)
+        if (data.modifiedCount) {
+          alert("Shipped Successfully")
+          fetch(`http://localhost:5000/purchasing/${user?.email}`)
+            .then((res) => res.json())
+            .then((data) => {
+              setOrder(data)
+              // console.log(data)
+            })
+        }
+      })
+  }
 
   //   This is For Delete
 
@@ -39,31 +56,14 @@ const ManageOrders = () => {
         }
       })
   }
-
-  const handleUpdate = (id) => {
-    const updateStatus = { status: "Shipping>>" }
-    const url = `http://localhost:5000/purchasing/${id}`
-    fetch(url, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json"
-      },
-      body: JSON.stringify(updateStatus)
-    })
+  //   load data
+  useEffect(() => {
+    const url = `http://localhost:5000/purchasing`
+    fetch(url)
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data)
-        if (data.modifiedCount) {
-          alert("Update Succeflly")
-          fetch(`http://localhost:5000/purchasing/${user?.email}`)
-            .then((res) => res.json())
-            .then((data) => {
-              setOrder(data)
-              console.log(data)
-            })
-        }
-      })
-  }
+      .then((data) => setOrder(data))
+  }, [user.email])
+
   return (
     <div className="myorder">
       <h2>Total Orders : {orders.length}</h2>
