@@ -23,18 +23,20 @@ const Purchase = () => {
     console.log(data)
 
     // post via axios //
-    axios.post("http://localhost:5000/purchasing", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Booked Successfully !!")
-        reset()
-      }
-    })
+    axios
+      .post("https://fast-brushlands-19287.herokuapp.com/purchasing", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Booked Successfully !!")
+          reset()
+        }
+      })
   }
 
   const { purchasingId } = useParams()
   const [bike, setBike] = useState({})
   useEffect(() => {
-    fetch(`http://localhost:5000/bikes/${purchasingId}`)
+    fetch(`https://fast-brushlands-19287.herokuapp.com/bikes/${purchasingId}`)
       .then((res) => res.json())
       .then((data) => setBike(data))
   }, [])

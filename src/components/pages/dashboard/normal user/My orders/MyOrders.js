@@ -16,7 +16,7 @@ const MyOrders = () => {
 
   //   load data
   useEffect(() => {
-    const url = `http://localhost:5000/purchasing?email=${user.email}`
+    const url = `https://fast-brushlands-19287.herokuapp.com/purchasing?email=${user.email}`
     fetch(url)
       .then((res) => res.json())
       .then((data) => setOrder(data))
@@ -25,7 +25,7 @@ const MyOrders = () => {
   //   This is For Delete
 
   const handleDeelete = (id) => {
-    const url = `http://localhost:5000/purchasing/${id}`
+    const url = `https://fast-brushlands-19287.herokuapp.com/purchasing/${id}`
     fetch(url, {
       method: "DELETE"
     })

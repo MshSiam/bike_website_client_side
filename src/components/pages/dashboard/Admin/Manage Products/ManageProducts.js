@@ -16,7 +16,7 @@ const ManageProducts = () => {
   //   This is For Delete
 
   const handleDeelete = (id) => {
-    const url = `http://localhost:5000/bikes/${id}`
+    const url = `https://fast-brushlands-19287.herokuapp.com/bikes/${id}`
     fetch(url, {
       method: "DELETE"
     })
@@ -32,7 +32,7 @@ const ManageProducts = () => {
   }
   //   load data
   useEffect(() => {
-    const url = `http://localhost:5000/bikes`
+    const url = `https://fast-brushlands-19287.herokuapp.com/bikes`
     fetch(url)
       .then((res) => res.json())
       .then((data) => setBikes(data))

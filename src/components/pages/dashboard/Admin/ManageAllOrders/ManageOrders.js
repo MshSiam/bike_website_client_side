@@ -16,7 +16,7 @@ const ManageOrders = () => {
 
   const handleUpdate = (id) => {
     const updateStatus = { status: "Shipping>>" }
-    const url = `http://localhost:5000/purchasing/${id}`
+    const url = `https://fast-brushlands-19287.herokuapp.com/purchasing/${id}`
     fetch(url, {
       method: "PUT",
       headers: {
@@ -29,7 +29,9 @@ const ManageOrders = () => {
         console.log(data)
         if (data.modifiedCount) {
           alert("Shipped Successfully")
-          fetch(`http://localhost:5000/purchasing/${user?.email}`)
+          fetch(
+            `https://fast-brushlands-19287.herokuapp.com/purchasing/${user?.email}`
+          )
             .then((res) => res.json())
             .then((data) => {
               setOrder(data)
@@ -42,7 +44,7 @@ const ManageOrders = () => {
   //   This is For Delete
 
   const handleDeelete = (id) => {
-    const url = `http://localhost:5000/purchasing/${id}`
+    const url = `https://fast-brushlands-19287.herokuapp.com/purchasing/${id}`
     fetch(url, {
       method: "DELETE"
     })
@@ -58,7 +60,7 @@ const ManageOrders = () => {
   }
   //   load data
   useEffect(() => {
-    const url = `http://localhost:5000/purchasing`
+    const url = `https://fast-brushlands-19287.herokuapp.com/purchasing`
     fetch(url)
       .then((res) => res.json())
       .then((data) => setOrder(data))

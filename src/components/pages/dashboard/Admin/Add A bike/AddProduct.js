@@ -10,12 +10,14 @@ const AddProduct = () => {
     console.log(data)
 
     // axios post //
-    axios.post("http://localhost:5000/bikes", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Bike Added !!")
-        reset()
-      }
-    })
+    axios
+      .post("https://fast-brushlands-19287.herokuapp.com/bikes", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Bike Added !!")
+          reset()
+        }
+      })
   }
   return (
     <div className="container spot-container">
