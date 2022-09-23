@@ -1,5 +1,5 @@
 
-# Tech Store Ecommerce
+# Bike Ecommerce
 
 This is fullstack web application using react js, material ui, react-router , firebase, node, mongodb and express.
 
